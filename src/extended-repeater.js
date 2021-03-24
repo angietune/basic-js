@@ -10,7 +10,7 @@ module.exports = function repeater(str, options) {
   }    
   
   if (typeof options.additionRepeatTimes == "undefined") {
-    additionRepeatTimes=1; 
+    additionRepeatTimes = 1; 
   } else {
     additionRepeatTimes = options.additionRepeatTimes; 
   }  
@@ -18,7 +18,7 @@ module.exports = function repeater(str, options) {
   if (typeof options.repeatTimes == "undefined") {
     repeatTimes = 0; 
   } else {
-    repeatTimes =  options.repeatTimes; 
+    repeatTimes = options.repeatTimes; 
   }  
   
   if (typeof options.separator == "undefined") {
@@ -30,9 +30,8 @@ module.exports = function repeater(str, options) {
   if (typeof options.additionSeparator == "undefined") {
     additionSeparator = '|'; 
   } else {
-    additionSeparator =  String(options.additionSeparator); 
+    additionSeparator = String(options.additionSeparator); 
   }
-
 
   let add = '';
   let end = '';
