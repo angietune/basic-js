@@ -26,7 +26,7 @@ export default class VigenereCipheringMachine {
 
   encrypt(message, key) {
     if (!message || !key || message === undefined || key === undefined) {
-      throw new Error();
+      throw new Error("Incorrect arguments!");
     }
 
     message = message.toUpperCase();
@@ -58,7 +58,7 @@ export default class VigenereCipheringMachine {
   }
   decrypt(message, key) {
     if (!message || !key || message === undefined || key === undefined) {
-      throw new Error();
+      throw new Error("Incorrect arguments!");
     }
 
     let alp = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
