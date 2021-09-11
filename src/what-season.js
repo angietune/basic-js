@@ -15,13 +15,15 @@ export default function getSeason(date) {
   console.log(date);
   if (!date) {
     return "Unable to determine the time of year!";
-  } else if (
-    Object.prototype.toString.call(date) !== "[object Date]" ||
-    // typeof date.getMonth === "function" ||
-    toString.call(date) !== "Date"
-  ) {
-    throw new Error(`Invalid date!`);
-  } else {
+  }
+  try {
+    //else if (
+    //   Object.prototype.toString.call(date) !== "[object Date]" ||
+    //   typeof date.getMonth !== "function" ||
+    //   toString.call(date) !== "Date"
+    // ) {
+    //   throw new Error(`Invalid date!`);
+    // } else {
     let month = date.getMonth();
     if (month === 0 || month === 1 || month === 11) {
       return "winter";
@@ -32,5 +34,7 @@ export default function getSeason(date) {
     } else {
       return "autumn";
     }
+  } catch (e) {
+    throw new Error(`Invalid date!`);
   }
 }
